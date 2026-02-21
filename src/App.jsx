@@ -1,35 +1,69 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+
+import { useState } from 'react';
+import AddTask from "./components/AddTasks.jsx";
+import TaskList from "./components/TaskList.jsx";
+import "App.css";
+
+
+export default function TaskApp() {
+  const [tasks, setTasks] = useState(initialTasks);
+
+  function handleAddTask(text) {
+    setTasks([
+      ...tasks,
+      {
+        id: nextId++,
+        text: text,
+        done: false,
+      },
+    ]);
+  }
+
+  function handleChangeTask(task) {
+    setTasks(
+      tasks.map((t) => {
+        if (t.id === task.id) {
+          return task;
+        } else {
+          return t;
+        }
+      })
+    );
+  }
+
+  function handleDeleteTask(taskId) {
+    setTasks(tasks.filter((t) => t.id !== taskId));
+  }
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <h1>My To Do List</h1>
+      <AddTask onAddTask={handleAddTask} />
+      <TaskList
+        tasks={tasks}
+        onChangeTask={handleChangeTask}
+        onDeleteTask={handleDeleteTask}
+      />
     </>
-  )
+  );
 }
 
-export default App
+let nextId = 3;
+const initialTasks = [
+  {id: 0, text: 'Visit Met Museum of Art', done: true},
+  {id: 1, text: 'Wash clothes', done: false},
+  {id: 2, text: `Watch a Knicks' game`, done: false},
+  {id: 3, text: 'Go food shopping', done: false},
+  {id: 4, text: 'Review JavaScript fundamentals', done: false},
+  {id: 5, text: 'Watch Unrivaled games', done: false},
+  {id: 6, text: 'Work on Capstone', done: false},
+];
+
+
+
+
+
+
+
+
