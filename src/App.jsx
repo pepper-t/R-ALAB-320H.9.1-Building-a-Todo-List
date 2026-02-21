@@ -1,10 +1,69 @@
 
-
+/*
 import { useState } from 'react';
 import AddTask from "./components/AddTasks.jsx";
 import TaskList from "./components/TaskList.jsx";
 import "App.css";
 
+
+export default function TaskApp() {
+  const [tasks, setTasks] = useState(initialTasks);
+
+  function handleAddTask(text) {
+    dispatch({//This is where {object: 'task that happened'} are written
+        id: nextId++,
+        text: text,
+        done: false,
+      });
+  }
+
+  function handleChangeTask(task) {
+    setTasks({
+         type: 'changed',
+         task: task,
+        
+      });
+  }
+
+  function handleDeleteTask(taskId) {
+  dispatch({
+    type: 'deleted',
+    id: taskId,
+  });
+}
+  return (
+    <>
+      <h1>My To Do List</h1>
+      <AddTask onAddTask={handleAddTask} />
+      <TaskList
+        tasks={tasks}
+        onChangeTask={handleChangeTask}
+        onDeleteTask={handleDeleteTask}
+      />
+    </>
+  );
+}
+
+let nextId = 3;
+const initialTasks = [
+  {id: 0, text: 'Visit Met Museum of Art', done: true},
+  {id: 1, text: 'Wash clothes', done: false},
+  {id: 2, text: `Watch a Knicks' game`, done: false},
+  {id: 3, text: 'Go food shopping', done: false},
+  {id: 4, text: 'Review JavaScript fundamentals', done: false},
+  {id: 5, text: 'Watch Unrivaled games', done: false},
+  {id: 6, text: 'Work on Capstone', done: false},
+];
+*/
+
+/*
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\\\ORIGINAL REACT.DEV 'PRAGUE ITINERARY'\\
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+import { useState } from 'react';
+import AddTask from './AddTask.js';
+import TaskList from './TaskList.js';
 
 export default function TaskApp() {
   const [tasks, setTasks] = useState(initialTasks);
@@ -38,7 +97,7 @@ export default function TaskApp() {
 
   return (
     <>
-      <h1>My To Do List</h1>
+      <h1>Prague itinerary</h1>
       <AddTask onAddTask={handleAddTask} />
       <TaskList
         tasks={tasks}
@@ -51,17 +110,18 @@ export default function TaskApp() {
 
 let nextId = 3;
 const initialTasks = [
-  {id: 0, text: 'Visit Met Museum of Art', done: true},
-  {id: 1, text: 'Wash clothes', done: false},
-  {id: 2, text: `Watch a Knicks' game`, done: false},
-  {id: 3, text: 'Go food shopping', done: false},
-  {id: 4, text: 'Review JavaScript fundamentals', done: false},
-  {id: 5, text: 'Watch Unrivaled games', done: false},
-  {id: 6, text: 'Work on Capstone', done: false},
+  {id: 0, text: 'Visit Kafka Museum', done: true},
+  {id: 1, text: 'Watch a puppet show', done: false},
+  {id: 2, text: 'Lennon Wall pic', done: false},
 ];
 
 
 
+
+
+
+
+*/
 
 
 
