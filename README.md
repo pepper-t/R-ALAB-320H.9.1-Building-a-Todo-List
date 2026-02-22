@@ -1,16 +1,32 @@
-# React + Vite
+# To Do List App: Helpful Resources for Its Creation
+I prompted https://Claude.ai with the question: "Can you point me to the resources that show me how to build a to-do list using React?"
+All the sources pointed to React.dev, particularly https://react.dev/learn/extracting-state-logic-into-a-reducer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+## React To Do List Update
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+I pasted and committed the 'To Do List' from https://react.dev/learn/extracting-state-logic-into-a-reducer. I followed the instructions for updating the list to make it operable. The goal here was to update the App.jsx file from a useState to a useRef.
 
-## React Compiler
+## To Do List: Final Update
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+After, completing the files according to the react.dev instruction, I updated the files according to my preferences.
 
-## Expanding the ESLint configuration
+I created the following folders and files for creating the To Do List app:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+components folder: 
+AddTasks.jsx  
+TaskList.jsx  
+tasksReducer.jsx
+
+I updated the App.jsx by importing the AddTasks.jsx, TaskList.jsx, and taskReducer.jsx files into it.
+
+
+ISSUES: I am not able to connect it and see the To Do List interface.
+
+
+
+
+
+
+
+
