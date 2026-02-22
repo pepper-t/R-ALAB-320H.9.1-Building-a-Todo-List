@@ -1,9 +1,13 @@
 
+
 //App.jsx 
 
 import { useReducer } from 'react';
-import AddTask from './AddTask.js';
-import TaskList from './TaskList.js';
+import AddTask from './components/AddTasks.jsx';
+import TaskList from './components/TaskList.jsx';
+
+
+
 
 function tasksReducer(tasks, action) {
   switch (action.type) {
@@ -350,8 +354,3 @@ const initialTasks = [
 
 
 */
-
-
-
-
-
