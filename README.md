@@ -12,7 +12,7 @@ After, completing the files according to the react.dev instruction, I updated th
 
 I created the following folders and files for creating the To Do List app:
 
-components folder: 
+components folder:
 AddTasks.jsx
 TaskList.jsx
 tasksReducer.jsx
@@ -33,12 +33,8 @@ I changed line 8 in main.jsx from <App /> to <TaskApp />
 Now, I can see the app and I was able to add, update, and delete tasks from it. The
 delete button also disabled until the task checkbox is checked.
 
-
 ## Design
 
 I altered the index.css to center the app and re-design the button and the text.
 
-
-
-
-
+ERROR CORRECTION: I forgot to add 'component' folder in github repo. Corrected this mistake and added AddTask.jsx, TaskList.jsx and tasksreducer.jsx to folder.
