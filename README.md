@@ -30,7 +30,8 @@ In the main.jsx, I changed the following lines to connect to the DOM:
 I changed line 4 from: import App from './App.jsx' to import TaskApp from './App.jsx'
 I changed line 8 in main.jsx from <App /> to <TaskApp />
 
-Now, I can see the app and I was able to add, update, and delete tasks from it.
+Now, I can see the app and I was able to add, update, and delete tasks from it. The
+delete button also disabled until the task checkbox is checked.
 
 
 ## Design
