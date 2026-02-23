@@ -31,3 +31,13 @@ I changed line 4 from: import App from './App.jsx' to import TaskApp from './App
 I changed line 8 in main.jsx from <App /> to <TaskApp />
 
 Now, I can see the app and I was able to add, update, and delete tasks from it.
+
+
+## Design
+
+I altered the index.css to center the app and re-design the button and the text.
+
+
+
+
+
